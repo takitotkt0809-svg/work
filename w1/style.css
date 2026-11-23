@@ -1,0 +1,151 @@
+/* 全局設定：讓名片在螢幕正中央，並設定深邃宇宙黑背景 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh; /* 讓畫面高度佔滿整個螢幕 */
+  display: flex;
+  justify-content: center; /* 水平置中 */
+  align-items: center;     /* 垂直置中 */
+  font-family: 'Segoe UI', 'Microsoft JhengHei', sans-serif;
+  color: #f8fafc; /* 星光銀白色文字 */
+  
+  /* 宇宙星幻感漸層背景：深黑、午夜藍與星雲紫交織 */
+  background: radial-gradient(circle at 20% 20%, #1e1b4b 0%, #090d16 45%, #000000 100%);
+  padding: 20px;
+}
+
+/* 名片主體卡片設計 */
+.cosmic-card {
+  width: 100%;
+  max-width: 360px; /* 限制名片最大寬度，在手機與電腦看都剛剛好 */
+  padding: 40px 30px;
+  border-radius: 24px; /* 圓角設計 */
+  text-align: center;
+  
+  /* 半透明深藍紫玻璃質感背景 */
+  background: linear-gradient(145deg, rgba(30, 27, 75, 0.75), rgba(15, 23, 42, 0.85));
+  backdrop-filter: blur(12px); /* 背景毛玻璃模糊效果 */
+  
+  /* 銀白色微光邊框 */
+  border: 1px solid rgba(226, 232, 240, 0.25);
+  
+  /* 宇宙星幻感多層次陰影（深黑立體陰影 + 藍紫星雲光暈） */
+  box-shadow: 
+    0 20px 50px rgba(0, 0, 0, 0.8),
+    0 0 30px rgba(99, 102, 241, 0.35),
+    inset 0 0 15px rgba(255, 255, 255, 0.08);
+    
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 滑鼠移到名片上時，卡片微微浮起並增強星光 */
+.cosmic-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 
+    0 25px 60px rgba(0, 0, 0, 0.9),
+    0 0 45px rgba(139, 92, 246, 0.55),
+    inset 0 0 20px rgba(255, 255, 255, 0.15);
+}
+
+/* 1. 圓形大頭貼外框光環 */
+.avatar-container {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 20px auto;
+  border-radius: 50%; /* 變成正圓形 */
+  padding: 4px; /* 留出外框光環的厚度 */
+  
+  /* 銀白到藍紫的星環漸層 */
+  background: linear-gradient(135deg, #e2e8f0, #60a5fa, #a855f7);
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.6); /* 紫色發光陰影 */
+}
+
+/* 大頭貼照片本體 */
+.avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 確保照片不變形，自動裁切填滿圓形 */
+  border-radius: 50%;
+  border: 3px solid #090d16; /* 照片與光環之間的深黑內邊框 */
+}
+
+/* 2. 名字樣式（帶有一點銀白漸層光澤） */
+.user-name {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+  background: linear-gradient(to right, #ffffff, #cbd5e1, #93c5fd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 10px rgba(147, 197, 253, 0.2);
+}
+
+/* 簡短自我介紹樣式 */
+.user-bio {
+  font-size: 14px;
+  color: #cbd5e1; /* 柔和的銀灰色 */
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+/* 星光分隔線 */
+.divider {
+  height: 1px;
+  width: 80%;
+  margin: 0 auto 24px auto;
+  background: linear-gradient(90deg, transparent, rgba(226, 232, 240, 0.4), transparent);
+}
+
+/* 3. 按鈕群組排列 */
+.button-group {
+  display: flex;
+  flex-direction: column; /* 讓兩個按鈕上下排列，整齊好點擊 */
+  gap: 14px; /* 按鈕之間的間距 */
+}
+
+/* 按鈕共用基礎樣式 */
+.btn {
+  display: block;
+  width: 100%;
+  padding: 12px 20px;
+  border-radius: 12px;
+  text-decoration: none; /* 去除超連結底線 */
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+/* Instagram 按鈕：星幻藍紫漸層 */
+.btn-ig {
+  color: #ffffff;
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+}
+
+.btn-ig:hover {
+  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+  box-shadow: 0 6px 25px rgba(139, 92, 246, 0.75);
+  transform: scale(1.02); /* 滑鼠靠近時微微放大 */
+}
+
+/* Email 按鈕：深空黑底搭配銀白星光邊框 */
+.btn-email {
+  color: #e2e8f0;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(226, 232, 240, 0.45);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.btn-email:hover {
+  color: #090d16;
+  background: #e2e8f0; /* 滑鼠靠近時變成亮銀白色 */
+  box-shadow: 0 0 20px rgba(226, 232, 240, 0.7);
+  transform: scale(1.02);
+}
