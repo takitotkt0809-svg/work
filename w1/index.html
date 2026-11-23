@@ -1,40 +1,44 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>個人數位名片</title>
-    <!-- 引入外部 CSS 樣式檔 -->
-    <link rel="stylesheet" href="style.css">
-    <!-- 引入外部字型與圖示庫 (Font Awesome) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>個人數位名片 - 宇宙星幻風</title>
+  <!-- 如果在自己電腦上使用，這行用來連接下方的 CSS 檔案；如果在 CodePen 測試則可忽略 -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="card-container">
-        <!-- 圓形大頭貼 -->
-        <div class="avatar-box">
-            <!-- 請將 src 裡面的圖片連換成您自己的圖片網址或檔案路徑 -->
-            <img src="https://scontent.fkhh1-1.fna.fbcdn.net/v/t39.30808-6/800925088_122244450650350968_58812229186124530_n.jpg?stp=dst-jpg_tt6&cstp=mx1836x1836&ctp=s1836x1836&_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=1JsMwJL5LCQQ7kNvwFKJN8A&_nc_oc=AdrCt3pkWVHa20VW8_VVYUfc2hSC1dwqcpAJ5aTF_yFn6pIa-bHeIcnPOIIONsEFGJw&_nc_zt=23&_nc_ht=scontent.fkhh1-1.fna&_nc_gid=hHjnYtOZjB1BMFroUmJMbg&_nc_ss=7b2a8&oh=00_AQPRMzUkYVnGeDDKd8x7Wm6Wn1vL6XY6o5dMixgO5CiZmg&oe=6AC92DA2" alt="個人大頭貼" class="avatar">
-        </div>
-
-        <!-- 名字與簡介 -->
-        <h1 class="name">滝麟</h1>
-        <p class="bio">26110136 來自南部的不專業考斯。</p>
-
-        <!-- 按鈕區域 -->
-        <div class="button-group">
-            <!-- Instagram 按鈕：請將 href 中的 # 替換為您的 IG 連結 -->
-            <a href="https://www.instagram.com/takilin.__.613?stkn=OXNkNGQxd282Y2dl" target="_blank" class="btn btn-instagram">
-                <i class="fa-brands fa-instagram"></i> Instagram
-            </a>
-            
-            <!-- Email 按鈕：請將 href 中的 your-email@example.com 替換為您的 Email -->
-            <a href="mailto: takitotkt0809@gmail.com" class="btn btn-email">
-                <i class="fa-regular fa-envelope"></i> Email Me
-            </a>
-        </div>
+  <!-- 名片外框容器 -->
+  <div class="cosmic-card">
+    
+    <!-- 1. 圓形大頭貼區塊 -->
+    <div class="avatar-container">
+      <!-- 請把 src="" 裡面的網址換成你自己的照片網址或檔案名稱 -->
+      <img src="https://scontent-tpe5-1.xx.fbcdn.net/v/t39.30808-6/845923856_122248595618350968_1771394812178694630_n.jpg?stp=dst-jpg_tt6&cstp=mx1818x2048&ctp=s1818x2048&_nc_cat=104&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_ohc=qqkNVNGZkcMQ7kNvwFAvPeb&_nc_oc=Adp-E4hAtBNnkn3o_blK__KuZHbB1-PJcD_AtWoFh-CEjN_HlPAQMcqUjVsWsQiP0N0&_nc_zt=23&_nc_ht=scontent-tpe5-1.xx&_nc_gid=R8rrX3b6SmSqyPs6QH03Cw&_nc_ss=7b2a8&oh=00_AQRWqHpM26sjko_ykdbtHicOH81EeS9NfJ-LulRF13Cf2Q&oe=6B09D25D" alt="photo" class="avatar">
     </div>
+
+    <!-- 2. 名字與簡短自我介紹 -->
+    <h1 class="user-name">セラフ•ダズルガデン</h1>
+    <p class="user-bio">✨俺の妻はイモリだ……今はもう暗殺者ではないが、俺は全力を尽くして彼女を守り抜く。彼女は、俺の生涯の愛する人なんだ✨</p>
+
+    <!-- 裝飾用的銀白星光分隔線 -->
+    <div class="divider"></div>
+
+    <!-- 3. 下方兩個按鈕 (Instagram 和 Email) -->
+    <div class="button-group">
+      <!-- 請把 href="" 裡的網址換成你的 IG 帳號網址 -->
+      <a href="https://www.instagram.com/takilin.__.613/" target="_blank" class="btn btn-ig">
+        Instagram
+      </a>
+      
+      <!-- 請把 mailto: 後面換成你的真實信箱 -->
+      <a href="mailto:takitotkt0809@gmail.com" class="btn btn-email">
+        Email 聯絡我
+      </a>
+    </div>
+
+  </div>
 
 </body>
 </html>
